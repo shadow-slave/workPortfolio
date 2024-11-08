@@ -1,0 +1,167 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #fff9f9;
+    line-height: 1.6;
+    background-color: #1e1a1a; /* Very dark warm gray */
+}
+  
+  /* Header */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 0 .5rem;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add some padding for spacing */
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+  }
+  
+  .topnav .logo {
+    flex: 1; /* Ensures the logo stays on the left */
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 8rem;
+  }
+
+  .topnav a {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:not(.logo):hover{
+    text-decoration: underline;
+    text-underline-offset: .514rem;
+    color: #e6735f;
+}
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+@media screen and (max-width: 990px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 990px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  
+  
+  /* Hero Section */
+  #hero {
+    height: 100vh;
+    text-align: center;
+    /* padding: 4em 1em; */
+    color: #fff;
+  }
+
+  .gradient_container {
+      width: 40vw;
+      height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0.4;
+  }
+  
+  
+  .box {
+      z-index: 0;
+      width: 50%;
+      height: 50%;
+      filter: blur(140px);
+      opacity: 70%;
+  }
+  .box:nth-child(1) {
+    background: #5e2b2b; /* Muted dark red */
+  }
+  
+  .box:nth-child(2) {
+    background: #6b3333; /* Deep warm gray with a hint of red */
+  }
+  
+  .box:nth-child(3) {
+    background: #4e1f1f; /* Dark, desaturated maroon */
+  }
+  
+  .box:nth-child(4) {
+    background: #7f3a2b; /* Dark warm brown */
+  }
+  
+  
+  
+  #hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  #hero p {
+    font-size: 1.2em;
+  }
+  
+  /* Sections */
+  section {
+    padding: 2em 1em;
+    
+  }
+  
+  section h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1em 0;
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    header nav {
+      display: flex;
+      justify-content: center;
+    }
+    
+    section {
+      padding: 4em 2em;
+    }
+  
+    #hero h1 {
+      font-size: 3em;
+    }
+  }
+  
