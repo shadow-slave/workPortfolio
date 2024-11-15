@@ -1,62 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aswin T S | Web Developer</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aswin T S | Web Developer</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-container container">
+          <input type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
 
-  <!-- Header Section -->
-  <header>
-    <div class="topnav" id="myTopnav">
-        <a href="./index.html" class="logo"> Aswin.ts</a>
+          <ul class="menu-items">
+            <li><a href="#services">Services</a></li>
 
-        <div class="nav-links">
-          
-          <a href="#services" >Services</a>
+            <li><a href="#prebuilt-demos">Portfolio</a></li>
 
-          <a href="#prebuilt-demos">Portfolio</a>
-  
-          <a href="#benefits">Why Me</a>
-  
-          <a href="#challenges">My Solutions</a>
-  
-          <a href="#testimonials">Testimonials</a>
-  
-          <a href="#contact">How to start</a>
+            <li><a href="#benefits">Why Me</a></li>
+
+            <li><a href="#challenges">My Solutions</a></li>
+
+            <li><a href="#testimonials">Testimonials</a></li>
+
+            <li><a href="#contact">How to start </a></li>
+          </ul>
+          <h1 class="logo">Aswin.ts</h1>
         </div>
-        
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    
-  </header>
+      </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="gradient_container">
-      <span class="box"></span>
-      <span class="box"></span>
-      <span class="box"></span>
-      <span class="box"></span>
-    </div>
-    <!-- <h1>Hey, I'm Aswin T S</h1>
-    <p>A passionate Web Developer creating clean and responsive designs.</p> -->
-  </section>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container-hero-head">
+        <h2>Powerful Websites for Growing</h2>
+        <p>
+          Hi! I'm Aswin, I create websites that meet your needs, boost your web
+          identity, and keep visitors coming back. <br />
+          Whether you're a small business, startup, or individual, I'm here to
+          help you succeed.
+        </p>
+        <div class="hero-buttons">
+          <div class="btn1">
+          <a href="#services" >Get in Touch</a>
 
-  <!-- About Section -->
-  <section id="about">
-    <!-- <h2>About Me</h2>
+          </div>
+          <div class="btn2">
+          <a href="#contact" >View Portfolio</a>
+          </div>
+        </div>
+      </div>
+      <div class="container-hero-pic">
+        <img src="assets/UI Developer.gif" alt="avatar" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <!-- <h2>About Me</h2>
     <p>I'm a web developer with a focus on creating beautiful, responsive websites.</p> -->
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <!-- <h2>Projects</h2>
+    <!-- Projects Section -->
+    <section id="projects">
+      <!-- <h2>Projects</h2>
     <div class="project">
       <h3>Project One</h3>
       <p>Brief description of the project. <a href="#">Learn more</a></p>
@@ -65,40 +82,29 @@
       <h3>Project Two</h3>
       <p>Brief description of the project. <a href="#">Learn more</a></p>
     </div> -->
-  </section>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <!-- <h2>Skills</h2>
+    <!-- Skills Section -->
+    <section id="skills">
+      <!-- <h2>Skills</h2>
     <ul>
       <li>HTML</li>
       <li>CSS</li>
       <li>JavaScript</li>
       <li>Python</li>
     </ul> -->
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <!-- <h2>Contact Me</h2>
+    <!-- Contact Section -->
+    <section id="contact">
+      <!-- <h2>Contact Me</h2>
     <p>Feel free to reach out via <a href="mailto:your-email@example.com">email</a> or follow me on social media.</p> -->
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Aswin T S. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
-    
-</body>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Aswin T S. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
