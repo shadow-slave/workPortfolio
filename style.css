@@ -70,8 +70,11 @@ body {
 }
 
 .menu-items a:hover {
-  color: #d9d5d56e;
-  transition: color 0.3s ease-in-out;
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  color: transparent;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out !important;
 }
 
 .logo {
@@ -222,6 +225,7 @@ body {
 .container-hero-head ol li {
   animation: slide-up 10s infinite;
 }
+
 @keyframes slide-up {
   0%,
   10% {
@@ -305,7 +309,7 @@ body {
   --borderWidth: 1.5px;
   background: #1D1F20;
   position: relative;
-  border-radius: var(--borderWidth);
+  border-radius: .3rem;
 }
 .gradient-border:after {
   content: '';
@@ -315,7 +319,7 @@ body {
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
   background: linear-gradient(60deg, #31302f, #636262, #131313, #616061, #222222, #232425, #4d4e4d, #383938);
-  border-radius: calc(2 * var(--borderWidth));
+  border-radius: .3rem;
   z-index: -1;
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
@@ -467,6 +471,67 @@ span[data-title]:hover::after,span[data-title]:focus::after{
   }
 }
 
+
+
+/* About */
+.about-main{
+  margin: 10rem;
+  display: flex;
+}
+.about-desc{
+  line-height: 1.5rem;
+}
+.about-desc h3{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about-main img{
+  width: 100%;
+  height: auto;
+  max-width: 15rem;
+  min-width: 12rem; 
+}
+.about-desc .years-exp{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.about-desc .years-exp p{
+  margin: 0 2rem;
+  font-size: .8rem;
+}
+.about-desc .years-exp h2{
+  margin: 0 2rem;
+justify-self: center;  /* font-size: .8rem; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-main {
+    flex-wrap: wrap;
+    margin: 2rem;
+    justify-content: center;
+  }
+  .about-main img{
+    width: 15rem;
+  }
+  .about-desc h3{
+    font-size: 1.2rem;
+  }
+  .about-desc p{
+    font-size: 0.95rem;
+  }
+.about-desc .years-exp{
+  flex-wrap: wrap;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   .about-main {
+    margin: 1.5rem 2rem;
+  }
+}
 
 
 /* Footer */
