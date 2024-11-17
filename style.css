@@ -344,7 +344,7 @@ body {
 
 
 
-@media screen and (max-width: 819px) {
+@media screen and (max-width: 825px) {
   #hero {
     grid-template-columns: 1fr;
     margin: 1.5rem 0;
