@@ -354,6 +354,7 @@ body {
 
   .container-hero-pic img {
     max-width: 15rem;
+    margin-top: -8rem;
   }
   #hero h2 {
     font-size: 1.5rem;
@@ -367,17 +368,110 @@ body {
 }
 
 
-/* Service */
-
-.service {
-  display: flex;
-  flex-direction: row;
+/* Service Section */
+#services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem; /* Add padding for spacing */
+  color: #fefefe; /* Match text color with body */
 }
+
+.service-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; /* Increase gap for better spacing */
+  padding: 1.5rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.service-card:hover {
+  transform: translatey(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9); /* Enhance shadow */
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fefefe; /* Headings in white for contrast */
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: #bfbfbf; /* Lighter gray for better readability */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.service-card img {
+  width: 50px;
+  height: 50px;
+  fill: #f37055; /* Highlight color to match theme */
+  margin-bottom: 1rem;
+}
+.service-card .tools img{
+  width: 25px;
+  height: 25px;
+  fill: #f37055; /* Highlight color to match theme */
+  margin-top: 1rem;
+  margin-right: .3rem;
+}
+
+span[data-title] {
+  position: relative; /* To position the tooltip relative to the element */
+}
+
+span[data-title]::after {
+  display: none; /* Initially hide the tooltip */
+  content: attr(data-title); /* Use the custom data attribute for tooltip text */
+  position: absolute;
+  top: 60%; /* Position below the element */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, 5px); /* Adjust position */
+  background: #1a1a1a; /* Dark background */
+  color: #fefefe; /* Light text color */
+  padding: 0.5em 0.75em; /* Padding for readability */
+  border-radius: 0.25rem; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  font-size: 0.875rem; /* Slightly smaller font */
+  z-index: 1000; /* Place above other elements */
+  opacity: 0; /* Start invisible */
+  pointer-events: none; /* Disable interactions */
+  white-space: nowrap; /* Prevent line breaks */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth appearance */
+}
+
+span[data-title]:hover::after,span[data-title]:focus::after{
+  display: block; /* Show the tooltip */
+  opacity: 1; /* Make it visible */
+  transform: translate(-50%, 0); /* Slide it into place */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    height: auto;
+    padding: 1rem;
+  }
+}
+
+
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1em;
+  padding: 1em 0;
   color: #fff;
-  background-color: #111;
 }
