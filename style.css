@@ -363,6 +363,9 @@ body {
   #hero h2 {
     font-size: 1.5rem;
   }
+  #hero p{
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -469,28 +472,82 @@ span[data-title]:hover::after,span[data-title]:focus::after{
     height: auto;
     padding: 1rem;
   }
+  .service-card p{
+    font-size: 1.2rem;
+  }
 }
 
 
 
 /* About */
 .about-main{
-  margin: 10rem;
+  margin: 15rem;
   display: flex;
 }
 .about-desc{
   line-height: 1.5rem;
 }
 .about-desc h3{
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+ -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, rgb(251, 251, 251), rgb(0, 0, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .about-main img{
+  position: relative;
   width: 100%;
   height: auto;
   max-width: 15rem;
   min-width: 12rem; 
+  z-index: -2 !important;
 }
+.about-img .img-tag,.about-img .tag-gradient-border{
+  position: absolute;
+  background: linear-gradient(80deg, rgb(75, 74, 74), rgb(0, 0, 0));
+  color: #ffffff;
+  border-radius: 2rem;
+  margin-top: -1.5rem;
+  padding: .5rem 1rem .5rem 1rem;
+  margin-left: -.9rem;
+    --borderWidth: 1.5px;
+}
+
+.about-img .tag-gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #31302f, #636262, #131313, #616061, #222222, #232425, #4d4e4d, #383938);
+  border-radius: 2rem;
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+  transition: all ease-in-out;
+}
+
+.about-img .tag-gradient-border:hover::after{
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+}
+.about-img .img-tag:hover{
+  color: #f5c2c2;
+}
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .about-desc .years-exp{
   display: flex;
   justify-content: center;
@@ -513,10 +570,10 @@ justify-self: center;  /* font-size: .8rem; */
     justify-content: center;
   }
   .about-main img{
-    width: 15rem;
+    width: 10rem;
   }
   .about-desc h3{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .about-desc p{
     font-size: 0.95rem;
@@ -530,6 +587,9 @@ justify-self: center;  /* font-size: .8rem; */
 @media (min-width: 768px) and (max-width: 1024px) {
    .about-main {
     margin: 1.5rem 2rem;
+  }
+  .about-main p{
+    font-size: 1rem;
   }
 }
 
