@@ -228,7 +228,7 @@ body {
   font-size: 3rem;
   font-weight: 600;
   -webkit-text-fill-color: transparent;
- background: linear-gradient(
+  background: linear-gradient(
     343deg,
     #f79533,
     #f37055,
@@ -241,7 +241,8 @@ body {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;}
+  background-clip: text;
+}
 
 .container-hero-head ol li {
   animation: slide-up 10s infinite;
@@ -457,13 +458,15 @@ body {
   line-height: 1.5;
 }
 
-.service-card img,.work-main .work-item .tools img{
+.service-card img,
+.work-main .work-item .tools img {
   width: 50px;
   height: 50px;
   fill: #f37055; /* Highlight color to match theme */
   margin-bottom: 1rem;
 }
-.service-card .tools img,.work-main .work-item .tools img {
+.service-card .tools img,
+.work-main .work-item .tools img {
   width: 25px;
   height: 25px;
   fill: #f37055; /* Highlight color to match theme */
@@ -526,7 +529,7 @@ span[data-title]:focus::after {
 .about-desc h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-   background: linear-gradient(
+  background: linear-gradient(
     343deg,
     #f79533,
     #f37055,
@@ -671,12 +674,11 @@ span[data-title]:focus::after {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
-.work-main .work-item{
+.work-main .work-item {
   position: relative;
-
 }
 .work-main .cards img:not(.tools img) {
-  /* display: block; */
+  display: block;
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
@@ -685,7 +687,7 @@ span[data-title]:focus::after {
   font-size: 2rem;
   align-self: center;
   margin-bottom: 1.5rem;
-background: linear-gradient(
+  background: linear-gradient(
     90deg,
     #fcfcfb,
     #fefefe,
@@ -706,29 +708,29 @@ background: linear-gradient(
   bottom: 0;
   color: #f1f1f1;
   width: 100%;
-  transition: .1s ease-in;
-  opacity:0;
+  transition: 0.1s ease-in;
+  opacity: 0;
   font-size: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 .work-main .work-item:hover .work-info {
   opacity: 1;
 }
 
 .work-main .work-item:hover img:not(.tools img) {
-  opacity: .31;
+  opacity: 0.31;
 }
 .work-item:hover .work-info {
   display: flex;
-  transition: all ease-in .1s;
+  transition: all ease-in 0.1s;
 }
 
 .work-main .info-head {
   font-size: 1.5rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .work-main .info-buttons {
   display: flex;
@@ -746,7 +748,7 @@ background: linear-gradient(
   cursor: default;
 }
 .work-info .info-buttons .info-button2 {
-  background-color:#826BAF;
+  background-color: #826baf;
   color: white;
   font-size: 0.8rem;
   border-radius: 1rem;
@@ -758,11 +760,10 @@ background: linear-gradient(
   background-color: #f3f3f3;
   color: #0a0a0a;
   font-size: 1rem;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   padding: 1rem 1rem;
   border: none;
-  cursor:pointer;
-
+  cursor: pointer;
 }
 .work-main .info-para {
   font-size: 1rem;
@@ -775,7 +776,7 @@ background: linear-gradient(
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  #work{
+  #work {
     margin-top: 10rem;
   }
   .work-main {
@@ -785,6 +786,90 @@ background: linear-gradient(
   }
   .work-desc h3 {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px  ) {
+  .work-main {
+  margin: 10rem;
+} 
+}
+
+
+
+/* Why Me ? BENEFITS SECTION */
+.benefits-main {
+  /* background-color: #baf689; */
+  margin: 5rem 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.benefits-main h3 {
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+    #fcfcfb,
+    #fefefe,
+    #4e328a,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.benefits-main img {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #2a2a2a;
+  border-radius: 50%;
+  padding: 0.61rem;
+}
+
+.benefits-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.benefit-1 {
+  display: flex;
+  gap: 2rem;
+
+}
+.benefit-1 h4 {
+  font-size: 1.2rem;
+}
+.benefit-1 p {
+  font-size: 0.991rem;
+  color: #b0afaf;
+}
+.benefit-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.31rem;
+}
+/* Responsive dewsign */
+@media (max-width: 768px) {
+  .benefits-main {
+    margin: 8rem 2rem;
+  }
+}
+/* Tablet Medium Size responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .benefits-main {
+    margin: 5rem 10rem;
+  }
+
+  .benefit-1 h4{
+    font-size: 1.2rem;
+  }
+  .benefit-1 p {
+    font-size: 0.991rem;
   }
 }
 
