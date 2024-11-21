@@ -980,6 +980,7 @@ span[data-title]:focus::after {
 }
 .contact-content h4 {
   font-size: 1.2rem;
+  margin-bottom: .81rem;
 }
 .contact-main ul {
   list-style: none;
