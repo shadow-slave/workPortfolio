@@ -63,7 +63,7 @@ To run locally:
 
    ```bash
    git clone https://github.com/shadow-slave/workPortfolio.git
-   cd aswin-portfolio
+   cd workPortfolio
    ```
 
 2. Open `index.html` in your browser:
